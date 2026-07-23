@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-07-23T10:00:00Z",
+  "schemaVersion": 2,
+  "providers": [
+    {
+      "provider": "codex",
+      "label": "Codex",
+      "source": "unavailable",
+      "windows": [],
+      "state": {
+        "status": "error",
+        "stale": false,
+        "sourcesTried": ["cli-rpc"],
+        "error": "codex_binary_override_not_executable"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-07-23T10:00:00Z",
+  "schemaVersion": 2,
+  "providers": [
+    {
+      "provider": "claude",
+      "label": "Claude",
+      "source": "unavailable",
+      "windows": [],
+      "state": {
+        "status": "unavailable",
+        "stale": false,
+        "sourcesTried": ["keychain"],
+        "reason": "keychain_access_required",
+        "remedyCommand": "quota-axi --allow-keychain-prompt"
+      }
+    }
+  ]
+}

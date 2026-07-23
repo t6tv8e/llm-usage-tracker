@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-07-23T10:00:00Z",
+  "schemaVersion": 2,
+  "providers": [
+    {
+      "provider": "claude",
+      "label": "Claude",
+      "source": "cache",
+      "windows": [
+        {"id": "seven_day", "label": "Weekly", "kind": "weekly", "percentUsed": 61}
+      ],
+      "state": {
+        "status": "stale",
+        "stale": true,
+        "sourcesTried": ["oauth", "cache"],
+        "refreshedAt": "2026-07-22T08:00:00Z"
+      }
+    }
+  ]
+}

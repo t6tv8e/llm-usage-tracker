@@ -1,0 +1,29 @@
+{
+  "name": "llm-usage-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local macOS menu bar tracker for Codex and Claude Code subscription usage",
+  "main": "dist/main/index.js",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc",
+    "start": "npm run build && electron .",
+    "watch": "tsc --watch",
+    "test": "npm run build && node --test tests/*.test.js",
+    "probe": "npm run build && node scripts/probe.js",
+    "package:mac": "npm run build && npx @electron/packager . \"LLM Usage\" --platform=darwin --arch=arm64 --out=out --overwrite --no-asar --extend-info=assets/Info.plist",
+    "install:mac": "npm run package:mac && (pkill -f '/Applications/LLM Usage.app/Contents/MacOS/LLM Usage' || true) && rm -rf '/Applications/LLM Usage.app' && cp -R 'out/LLM Usage-darwin-arm64/LLM Usage.app' '/Applications/LLM Usage.app' && open '/Applications/LLM Usage.app'"
+  },
+  "dependencies": {
+    "menubar": "^9.5.2",
+    "quota-axi": "0.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "electron": "^37.0.0",
+    "typescript": "^7.0.2"
+  }
+}

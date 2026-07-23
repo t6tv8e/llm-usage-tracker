@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>LLM Usage</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="../../dist/renderer/renderer.js"></script>
+</head>
+<body>
+  <main>
+    <header class="app-header">
+      <h1>LLM Usage</h1>
+      <div class="header-actions">
+        <button id="refresh" class="icon-button" type="button" title="Refresh usage" aria-label="Refresh usage">↻</button>
+        <button id="settings-toggle" class="icon-button" type="button" title="Settings" aria-label="Settings">⚙</button>
+      </div>
+    </header>
+
+    <section id="settings-panel" class="settings-panel" hidden aria-label="Settings">
+      <form id="settings-form">
+        <label>Tray display
+          <select id="tray-mode" name="trayMode">
+            <option value="icon">Icon only</option>
+            <option value="both">Both percentages</option>
+            <option value="highest">Highest percentage</option>
+            <option value="claude">Claude only</option>
+            <option value="codex">Codex only</option>
+          </select>
+        </label>
+        <div class="settings-row">
+          <label>Poll every
+            <span><input id="poll-interval" name="pollIntervalMinutes" type="number" min="3" max="1440" step="1"> min</span>
+          </label>
+          <label>Warn at
+            <span><input id="warn-threshold" name="warnAtPercent" type="number" min="1" max="94" step="1">%</span>
+          </label>
+        </div>
+        <label class="checkbox-label"><input id="launch-login" name="launchAtLogin" type="checkbox"> Launch at login</label>
+        <p class="settings-note">Launch at login requires a packaged build during development.</p>
+        <div class="settings-actions"><span id="settings-status" role="status"></span><button type="submit">Save</button></div>
+      </form>
+    </section>
+
+    <section id="providers" aria-live="polite"></section>
+
+    <footer>
+      <span id="updated">Not updated yet</span>
+      <button id="quit" class="text-button" type="button">Quit</button>
+    </footer>
+  </main>
+</body>
+</html>

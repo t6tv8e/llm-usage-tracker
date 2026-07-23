@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-07-23T10:00:00Z",
+  "schemaVersion": 2,
+  "providers": [
+    {
+      "provider": "claude",
+      "label": "Claude",
+      "source": "oauth",
+      "windows": [
+        {"id": "extra_usage", "label": "Extra usage", "kind": "credits", "spentUsd": 12.5, "limitUsd": 50},
+        {"id": "monthly", "label": "Monthly", "kind": "monthly", "percentRemaining": 80},
+        {"id": "unknown", "label": "Unavailable percent", "kind": "unknown"}
+      ],
+      "state": {"status": "fresh", "stale": false, "sourcesTried": ["oauth"]}
+    }
+  ]
+}

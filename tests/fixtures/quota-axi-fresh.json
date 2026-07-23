@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-07-23T10:00:00Z",
+  "schemaVersion": 2,
+  "providers": [
+    {
+      "provider": "codex",
+      "label": "Codex",
+      "source": "oauth",
+      "plan": "plus",
+      "windows": [
+        {
+          "id": "five_hour",
+          "label": "5-hour",
+          "kind": "session",
+          "percentUsed": 42.5,
+          "resetsAt": "2026-07-23T12:00:00Z",
+          "windowSeconds": 18000
+        },
+        {
+          "id": "weekly",
+          "label": "Weekly",
+          "kind": "weekly",
+          "percentRemaining": 25,
+          "windowSeconds": 604800
+        }
+      ],
+      "state": {
+        "status": "fresh",
+        "stale": false,
+        "sourcesTried": ["oauth"],
+        "refreshedAt": "2026-07-23T10:01:00Z"
+      }
+    }
+  ]
+}

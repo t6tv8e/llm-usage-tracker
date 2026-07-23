@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-07-23T10:00:00Z",
+  "schemaVersion": 2,
+  "providers": [
+    {
+      "provider": "codex",
+      "label": "Codex",
+      "source": "oauth",
+      "credits": {"remaining": 100, "unit": "credits"},
+      "windows": [
+        {"id": "model:o3:7d", "label": "o3 weekly", "kind": "model", "percentUsed": 33}
+      ],
+      "state": {"status": "fresh", "stale": false, "sourcesTried": ["oauth"]}
+    },
+    {
+      "provider": "claude",
+      "label": "Claude",
+      "source": "unavailable",
+      "windows": [],
+      "state": {"status": "auth_required", "stale": false, "sourcesTried": ["oauth"]}
+    }
+  ]
+}

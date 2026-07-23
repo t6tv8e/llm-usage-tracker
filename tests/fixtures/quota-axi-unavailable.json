@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-07-23T10:00:00Z",
+  "schemaVersion": 2,
+  "providers": [
+    {
+      "provider": "codex",
+      "label": "Codex",
+      "source": "unavailable",
+      "windows": [],
+      "state": {
+        "status": "unavailable",
+        "stale": false,
+        "sourcesTried": ["oauth"],
+        "error": "provider request failed"
+      }
+    }
+  ]
+}
