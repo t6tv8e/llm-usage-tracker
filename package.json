@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Local macOS menu bar tracker for Codex and Claude Code subscription usage",
+  "license": "MIT",
   "main": "dist/main/index.js",
   "engines": {
     "node": ">=22.19"
